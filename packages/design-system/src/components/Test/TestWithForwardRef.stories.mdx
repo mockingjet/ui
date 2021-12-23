@@ -1,0 +1,15 @@
+import { ArgsTable, Canvas, Meta, Props, Story } from '@storybook/addon-docs';
+
+import { TestWithForwardRef } from '.';
+
+<Meta title="Components/TestWithForwardRef" component={TestWithForwardRef} />
+
+<Canvas>
+	<Story name="testWithForwardRef" args={{ hasHello: true }}>
+		{args => <TestWithForwardRef {...args} />}
+	</Story>
+</Canvas>
+
+<Props />
+
+<ArgsTable story="testWithForwardRef" />
