@@ -37,7 +37,6 @@ import Stepper from './components/Stepper';
 import Tabs from './components/Tabs';
 import Tag from './components/Tag';
 import ThemeProvider from './components/ThemeProvider';
-import Toggle from './components/Toggle';
 import Tooltip from './components/Tooltip';
 import VisuallyHidden from './components/VisuallyHidden';
 
@@ -51,6 +50,7 @@ export {
 	ButtonIconFloating,
 	ButtonIconToggle,
 	ButtonIconDefault,
+	ButtonIconToggle as Toggle,
 	Card,
 	Combobox,
 	Divider,
@@ -80,7 +80,6 @@ export {
 	Tabs,
 	Tag,
 	ThemeProvider,
-	Toggle,
 	Tooltip,
 	VisuallyHidden,
 	themes,

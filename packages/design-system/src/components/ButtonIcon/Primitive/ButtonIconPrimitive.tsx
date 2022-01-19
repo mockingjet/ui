@@ -14,7 +14,7 @@ type CommonTypes = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className' | '
 	icon: IconName;
 	children: string;
 	isLoading?: boolean;
-	onClick: () => void;
+	onClick: (event: React.MouseEvent<HTMLButtonElement> | KeyboardEvent) => void;
 };
 
 export type ToggleTypes = CommonTypes & {
