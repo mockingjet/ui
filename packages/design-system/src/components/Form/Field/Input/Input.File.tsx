@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { unstable_useId as useId } from 'reakit';
 import { Trans, useTranslation } from 'react-i18next';
 import { TFunction } from 'i18next';
+import classnames from 'classnames';
 import { ButtonIconDefault } from '../../../ButtonIcon';
 import Link from '../../../Link';
 import { Icon } from '../../../Icon';
@@ -91,6 +92,10 @@ const FileField = styled.div`
 		align-items: flex-start;
 		justify-content: space-between;
 		padding: 0.4rem 1rem;
+
+		&.singleFile {
+			align-items: center;
+		}
 
 		&__button {
 			button {
@@ -225,7 +230,11 @@ const InputFile = React.forwardRef((props: FileProps, ref: React.Ref<HTMLInputEl
 							</span>
 						</div>
 					) : (
-						<div className="input-file__preview preview">
+						<div
+							className={classnames('input-file__preview preview', {
+								singleFile: Array.from(files).length === 1,
+							})}
+						>
 							<VisuallyHidden>You have selected:</VisuallyHidden>
 							{/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
 							<ol role="list" className="preview__list">

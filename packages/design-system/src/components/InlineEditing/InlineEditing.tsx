@@ -114,6 +114,7 @@ const InlineEditing = React.forwardRef(
 										| React.ChangeEvent<HTMLTextAreaElement>,
 								): void => setValue(event.target.value)}
 								data-test={testId}
+								data-padding-override={mode !== Mode.Multi}
 							/>
 							<div className="c-inline-editing__actions">
 								<StackHorizontal
@@ -163,7 +164,7 @@ const InlineEditing = React.forwardRef(
 								aria-label={ariaLabel}
 								icon="talend-pencil"
 								disabled={loading}
-								size="S"
+								size="XS"
 							>
 								{t('INLINE_EDITING_EDIT', 'Edit')}
 							</ButtonIconDefault>
